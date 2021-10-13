@@ -24,9 +24,9 @@ def read():
         feat = input("Опишите ДТП (Что находилось рядом, освещение, состояние дороги)")
         inj = input('Сколько пострадавших? Ответ в числовом формате')
         dead = input('Сколько человек погибло? Ответ в числовом формате')
-
-        df = pd.DataFrame([[gibddid, region, parent_region, date, g.location, g.latitudeg.latitude, g.longitudeg.longitude, feat, inj,dead]],
-                          columns=['gibddid', 'region', 'parent_region', 'date', 'address', 'lat', 'lon', 'feat', 'inj_count', 'dead_count'])
+        intraction = 4*dead+inj
+        df = pd.DataFrame([[gibddid, region, parent_region, date, g.location, g.latitudeg.latitude, g.longitudeg.longitude, feat, inj,dead, intraction]],
+                          columns=['gibddid', 'region', 'parent_region', 'date', 'address', 'lat', 'lon', 'feat', 'inj_count', 'dead_count', 'interaction'])
         print(df)
 
 
